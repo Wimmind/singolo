@@ -1,3 +1,9 @@
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+
 body {
     margin: 0;
     font-family: 'Lato Regular', sans-serif;
@@ -79,4 +85,47 @@ body {
     width: 100%;
     background-color: #f06c64;
     border-bottom: solid 6px #ea676b;
+}
+
+.slider_content {
+    width: 1020px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.vertical_mobile {
+    position: absolute;
+    left: 112px;
+    top: 53px;
+}
+.horizont_mobile {
+    position: absolute;
+    right: 111px;
+    top: 174px;
+}
+
+.slider_content button{
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    border: 0;
+    background-color: #f06c64;
+}
+
+.slider_content button:hover{
+   background-color :#ffffff;
+}
+
+.prev_slide {
+    top: 277px;
+    left: 36px;
+    padding-top: 4px;
+    padding-left: 6px;
+}
+
+.next_slide {
+    padding-top: 4px;
+    padding-right: 4px;
+    top: 277px;
+    right: 36px;
 }
