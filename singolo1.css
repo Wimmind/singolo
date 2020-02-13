@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: 'Lato Regular', sans-serif;
+    background-color: #fefefe;
+}
+/*хеддер*/
+.header {
+    height: 89px;
+    width: 100%;
+    background-color: #2d303a;
+    border-bottom: solid 6px #323746;
+}
+
+.header_content {
+    margin: 0 auto;
+    padding-top: 24px;
+    width: 1020px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_logo h1 {
+    font-size: 25px;
+    line-height: 6px;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-left: 38px;
+}
+
+.star {
+    color: #f06c64;
+}
+
+.nav_list {
+    display: flex;
+    width: 410px;
+    font-size: 12px;
+    line-height: 6px;
+    font-weight: 500;
+    color: #ffffff;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.nav_list_elem{
+    margin-top: 11px;
+    margin-right: 29px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav_list_elem-active {
+    color: #f06c64;
+}
+
+.nav_list_elem::after {
+    content: "";
+    background-color: #434759;
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    margin-right: 1px;
+    top: 49%;
+    right: -16px;
+}
+
+.nav_list_elem:hover {
+    color: #f06c64;
+}
+
+/*ласт элемент убрать точку*/
+.nav_list_elem:last-child::after { 
+    width: 0;
+}
+/*слайдер*/
+.slider{
+    height: 594px;
+    width: 100%;
+    background-color: #f06c64;
+    border-bottom: solid 6px #ea676b;
+}
