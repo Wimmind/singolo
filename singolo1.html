@@ -10,83 +10,84 @@
 <body>
     <header class="header">
             <div class="header_content">
-                <div class="header_logo"><h1>Singolo<span class="star">*</span></h1>
+                <div class="logo"><h1><a href="#" class="link">Singolo</a><span class="star">*</span></h1>
                 </div>
-                <nav class="nav">
-                    <ul class="nav_list">
-                        <li class="nav_list_elem pixelFix_4">Home</li>
-                        <li class="nav_list_elem ">Services</li>
-                        <li class="nav_list_elem">Portfolio</li>
-                        <li class="nav_list_elem">About</li>
-                        <li class="nav_list_elem">Contact</li>
+                <nav class="header__navigation">
+                    <ul class="navigation">
+                        <li class="navigation_elem pixel-fix-4"><a>Home</a></li>
+                        <li class="navigation_elem"><a href="#services" class="link">Services</a></li>
+                        <li class="navigation_elem"><a class="link">Portfolio</a></li>
+                        <li class="navigation_elem"><a class="link">About</a></li>
+                        <li class="navigation_elem"><a class="link">Contact</a></li>
                     </ul>
                 </nav>
             </div>
     </header>
-    <main>
+    <main id="main">
         <div class="slider">
             <div class="slider_content">
                 <img src="assets/image/vertical_mobile.png" class="vertical_mobile" alt="vertical_mobile">
                 <img src="assets/image/horizont_mobile.png" class="horizont_mobile" alt="horizont_mobile">
-                <button class="prev_slide">
-                    <img src="assets/image/prev_slide.png" alt="prev_slide">
-                </button>
-                <button class="next_slide">
-                    <img src="assets/image/next_slide.png" alt="next_slide">
-                </button>
+                <div class="slider__buttons">
+                    <button class="prev_slide switch_button">
+                    </button>
+                    <button class="next_slide switch_button">
+                    </button>
+                </div>
             </div>
         </div>
-        <div class="ourServices">
-            <div class="ourServices_content">
-                <div class="description">
-                    <h2 class="description_title">Our Services</h2>
-                    <p class="description_subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula,  eget <span> lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh</span></p>
+        <div class="services" id="services">
+            <div class="services_content">
+                <div class="services__description">
+                    <h2>Our Services</h2>
+                    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula,  eget <span class="pixel-fix-5"> lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh</span></p>
                 </div>
 
-                <div class="ourServices_sections">
-                    <div class="ourServices_sections_elem">
+                <div class="services__sections">
+
+                    <div class="services_elem">
                         <img src="assets/image/pen.svg" alt="">
-                        <div class="ourServices_sections_elem_text">
+                        <div class="sections_elem__text">
                             <h3>Custom Design</h3>
-                            <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+                            <p><span class="pixel-fix-1"> Curabitur vestibulum</span> eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                         </div>
                     </div>
 
-                    <div class="ourServices_sections_elem">
+                    <div class="services_elem">
                         <img src="assets/image/lightbulb.svg" alt="">
-                        <div class="ourServices_sections_elem_text">
+                        <div class="sections_elem__text">
                             <h3>Inovative Ideas</h3>
-                            <p><span class="pixelFix_1">Quisque luctus, quam eget molestie com-</span><br>modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+                            <p><span class="pixel-fix-1">Quisque luctus, quam eget molestie com-</span><br>modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                         </div>
                     </div>
 
-                    <div class="ourServices_sections_elem">
+                    <div class="services_elem">
                         <img src="assets/image/heart.svg" alt="">
-                        <div class="ourServices_sections_elem_text">
+                        <div class="sections_elem__text">
                             <h3>Love Is The Answer</h3>
                             <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                         </div>
                     </div>
 
-                    <div class="ourServices_sections_elem">
+                    <div class="services_elem">
                         <img src="assets/image/phone.svg" alt="">
-                        <div class="ourServices_sections_elem_text">
+                        <div class="sections_elem__text">
                             <h3>Responsive Layout</h3>
-                            <p>Sed porttitor placerat rhoncus. In at nunc <span class="pixelFix_2"> tellus. Maecenas blandit nunc ligula. Prae-</span><br>sent elit leo.</p>
+                            <p>Sed porttitor placerat rhoncus. In at nunc <span class="pixel-fix-2"> tellus. Maecenas blandit nunc ligula. Prae-</span><br>sent elit leo.</p>
                         </div>
                     </div>
 
-                    <div class="ourServices_sections_elem">
+                    <div class="services_elem">
                         <img src="assets/image/bubble.svg" alt="">
-                        <div class="ourServices_sections_elem_text">
-                            <h3 class="pixelFix_3">24 / 7 Support</h3>
-                            <p>Vivamus vel quam lacinia, tincidunt dui <span class="pixelFix_2">non, vehicula nisi. Nulla a sem erat. Pellen-</span><br> tesque egestas venenatis lorem .</p>
+                        <div class="sections_elem__text">
+                            <h3 class="pixel-fix-3">24 / 7 Support</h3>
+                            <p>Vivamus vel quam lacinia, tincidunt dui <span class="pixel-fix-2">non, vehicula nisi. Nulla a sem erat. Pellen-</span><br> tesque egestas venenatis lorem .</p>
                         </div>
                     </div>
 
-                    <div class="ourServices_sections_elem">
+                    <div class="services_elem">
                         <img src="assets/image/star.svg" alt="">
-                        <div class="ourServices_sections_elem_text">
+                        <div class="sections_elem__text">
                             <h3>Feel Like A Star</h3>
                             <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
                         </div>
