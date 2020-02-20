@@ -130,20 +130,20 @@ body {
 
 .prev_slide {
     margin-left: 42px;
-    background-image: url(assets/image/prev_slide.png);
+    background-image: url(assets/image/singolo1/prev_slide.png);
 }
 
 .prev_slide:hover {
-    background-image: url(assets/image/prev_slide1.png);
+    background-image: url(assets/image/singolo1/prev_slide1.png);
 }
 
 .next_slide {
     margin-right: 40px;
-    background-image: url(assets/image/next_slide.png);
+    background-image: url(assets/image/singolo1/next_slide.png);
 }
 
 .next_slide:hover {
-    background-image: url(assets/image/next_slide1.png);
+    background-image: url(assets/image/singolo1/next_slide1.png);
 }
 
 .services {
