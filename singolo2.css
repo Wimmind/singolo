@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: 'Lato Regular', sans-serif;
+    background-color: #fefefe;
+}
+
+.portfolio {
+    height: 864px;
+    width: 100%;
+    background-color: #2d303a;
+    border-bottom: solid 6px #323746;
+}
+
+.portfolio_content {
+    margin: 0 auto;
+    width: 1020px;
+    padding-top: 42px;
+    padding-left: 82px;
+}
+
+.portfolio__description {
+    padding-top: 3px;
+}
+
+.portfolio__description h2{
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: 'Lato Black', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.1px;
+}
+
+.portfolio__description p {
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-weight: 300;
+    word-spacing: -2.2px;
+}
