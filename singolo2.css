@@ -136,11 +136,11 @@ p {
     font-weight: 400;
     word-spacing: -1px;
     margin-top: -7px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.1px;
 }
 
 .employee:last-child img{
-    margin-left: 1px;
+    margin-left: 2px;
 }
 
 .employee:last-child h3{
@@ -165,10 +165,7 @@ p {
     margin-right: -1px;
 }
 
-.employee:last-child .ico-linkedin{
-    margin-left: 0.3px;
-}
-
-.employee:last-child .ico-facebook{
-    margin-left: 0.1px;
+.pixel-fix-7 {
+    letter-spacing: 0.1px;
+    margin-left: 1.7px;
 }
