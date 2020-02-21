@@ -34,7 +34,7 @@ body {
     margin-left: 38px;
 }
 
-.star {
+.logo-star {
     color: #f06c64;
 }
 
@@ -49,24 +49,24 @@ body {
     text-transform: uppercase;
 }
 
-.navigation_elem{
+.navigation-elem{
     margin-top: 11px;
     margin-right: 29px;
     cursor: pointer;
     position: relative;
 }
 
-.link{
+.navigation-link{
     text-decoration: none;
     color: #ffffff;
     cursor: pointer;
 }
 
-.navigation_elem a:hover{
+.navigation-elem a:hover{
     color: #f06c64;
 }
 
-.navigation_elem::after {
+.navigation-elem::after {
     content: "";
     background-color: #434759;
     width: 2px;
@@ -77,12 +77,12 @@ body {
     right: -16px;
 }
 
-.navigation_elem:hover {
+.navigation-elem:hover {
     color: #f06c64;
 }
 
-/*ласт элемент убрать точку*/
-.navigation_elem:last-child::after { 
+
+.navigation-elem:last-child::after { 
    display: none;
 }
 /*слайдер*/
@@ -99,12 +99,12 @@ body {
     position: relative;
 }
 
-.vertical_mobile {
+.vertical-mobile {
     position: absolute;
     left: 112px;
     top: 53px;
 }
-.horizont_mobile {
+.horizont-mobile {
     position: absolute;
     right: 111px;
     top: 174px;
@@ -118,7 +118,7 @@ body {
     justify-content: space-between;
 }
 
-.switch_button {
+.switch-button {
     background-repeat: no-repeat;
     width: 16px;
     height: 27px;
@@ -128,22 +128,22 @@ body {
     margin: 0 3px;
 }
 
-.prev_slide {
+.prev-slide {
     margin-left: 42px;
-    background-image: url(assets/image/singolo1/prev_slide.png);
+    background-image: url(./assets/image/singolo1/prev_slide.png);
 }
 
-.prev_slide:hover {
-    background-image: url(assets/image/singolo1/prev_slide1.png);
+.prev-slide:hover {
+    background-image: url(./assets/image/singolo1/prev_slide1.png);
 }
 
-.next_slide {
+.next-slide {
     margin-right: 40px;
-    background-image: url(assets/image/singolo1/next_slide.png);
+    background-image: url(./assets/image/singolo1/next_slide.png);
 }
 
-.next_slide:hover {
-    background-image: url(assets/image/singolo1/next_slide1.png);
+.next-slide:hover {
+    background-image: url(./assets/image/singolo1/next_slide1.png);
 }
 
 .services {
@@ -186,13 +186,37 @@ body {
     flex-wrap: wrap;
 }
 
-.services_elem {
+.services__elem {
     display: flex;
     flex-basis: 32%;
     margin-top: -11px;
 }
 
-.services_elem h3 {
+.services__elem:nth-child(1) img{
+    margin-top: 3px;
+}
+
+.services__elem:nth-child(2) img{
+    margin-top: 3px;
+}
+
+.services__elem:nth-child(4) img{
+    margin-top: -1px;
+}
+
+.services__elem:nth-child(5) img{
+    margin-top: -1px;
+}
+
+.services__elem:nth-child(6) img{
+    margin-top: -1px;
+}
+
+.services__elem:nth-child(3) img{
+    margin-top: 3px;
+}
+
+.services__elem h3 {
     font-family: "Lato Black";
     font-size: 18px;
     font-weight: 400;
@@ -201,7 +225,7 @@ body {
     margin-bottom: -16px;
 }
 
-.services_elem p {
+.services__elem p {
     color: #767e9e;
     font-size: 12px;
     line-height: 22px;
@@ -210,7 +234,7 @@ body {
     text-align: justify;
 }
 
-.sections_elem__text {
+.elem-text {
     margin-left: 18px;
 }
 
