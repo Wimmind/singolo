@@ -1,1 +1,1 @@
-# [посмотреть](https://wimmind.io/singolo/)
+# [посмотреть](https://wimmind.github.io/singolo/)
