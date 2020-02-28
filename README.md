@@ -1,1 +1,1 @@
-# [посмотреть](https://wimmind.io/rsschool-cv/)
+# [посмотреть](https://wimmind.io/singolo/)
