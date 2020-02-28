@@ -1,1 +1,1 @@
-[посмотреть](https://wimmind.io/rsschool-cv/)
+# readme
