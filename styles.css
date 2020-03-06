@@ -16,7 +16,7 @@ body {
 
 .wrapper {
     margin: 0 auto;
-    width: 1020px;
+    min-width: 1020px;
 }
 
 h2 {
