@@ -12,11 +12,12 @@ body {
     margin: 0;
     font-family: 'Lato Regular', sans-serif;
     background-color: #fefefe;
+    min-width: 1020px;
 }
 
 .wrapper {
     margin: 0 auto;
-    min-width: 1020px;
+    width: 1020px;
 }
 
 h2 {
