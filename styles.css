@@ -1,6 +1,8 @@
 button, 
 button:active, 
-button:focus {
+button:focus,
+input:active,
+input:focus {
     outline: none;
 }
 
@@ -82,7 +84,7 @@ li {
     font-weight: 300;
 }
 
-.navigation-elem{
+.navigation-element{
     margin-top: 11px;
     margin-right: 29px;
     cursor: pointer;
@@ -94,11 +96,11 @@ li {
     color: #ffffff;
 }
 
-.navigation-elem a:hover{
+.navigation-element a:hover{
     color: #f06c64;
 }
 
-.navigation-elem::after {
+.navigation-element::after {
     content: "";
     background-color: #434759;
     width: 2px;
@@ -109,7 +111,7 @@ li {
     right: -16px;
 }
 
-.navigation-elem:last-child::after { 
+.navigation-element:last-child::after { 
    display: none;
 }
 
@@ -199,7 +201,7 @@ li {
     flex-basis: 32%;
     height: 103px;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
 }
 
 .element-ico{
@@ -258,7 +260,7 @@ li {
     line-height: 22px;
     text-align: justify;
     overflow: hidden;
-    height: 60px;
+    height: 61px;
 }
 
 .services__element:nth-child(n+4) .elem-ico {
@@ -334,6 +336,9 @@ li {
 .picture {
     flex-basis: 25%;
     margin-bottom: 17px;
+    cursor: pointer;
+    width: 220px;
+    height: 187px;
 }
 
 .about-us {
@@ -479,6 +484,7 @@ li {
     color: #f0d8d9;
 }
 
+
 .get-a-quote__form input::placeholder{
     color: #f48c8f;
     font-family: 'Lato Regular', sans-serif;
@@ -516,9 +522,28 @@ li {
     font-family: 'Lato Regular', sans-serif;
 }
 
-.get-a-quote__form button:hover {
-    color:  #d6564f;
-    background-color: #f48c8f;
+.get-a-quote__form button:hover,
+.get-a-quote__form input:hover,
+.get-a-quote__form textarea:hover { 
+    background-color: #b14a44;
+}
+
+.get-a-quote__form input:focus,
+.get-a-quote__form textarea:focus {
+    color: black;
+    background-color: #f0d8d9;
+}
+.get-a-quote__form input:-webkit-autofill,
+.get-a-quote__form textarea:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px #d6564f !important;
+    -webkit-text-fill-color: white !important; 
+}
+
+.get-a-quote__form input:required:invalid:focus {
+    border: 2px solid rgb(241, 22, 22);
+}
+.get-a-quote__form input:required:valid:focus {
+    border: 2px solid rgb(10, 190, 10);
 }
 
 .get-a-quote__contacts {
