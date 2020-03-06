@@ -51,18 +51,21 @@ li {
     border-bottom: solid 6px #323746;
 }
 
-.header .wrapper{
+.header__wrapper{
     padding: 24px 0;
+}
+
+.logo {
+    padding-left: 40px;
 }
 
 .logo h1 {
     font-size: 25px;
     line-height: 6px;
-    font-weight: 500;
     color: #ffffff;
     text-transform: uppercase;
-    margin-left: 38px;
     font-weight: 700;
+    letter-spacing: -0.3px;
 }
 
 .logo-star {
@@ -117,7 +120,7 @@ li {
     border-bottom: solid 6px #ea676b;
 }
 
-.slider .wrapper {
+.slider__wrapper {
     position: relative;
 }
 
@@ -174,7 +177,7 @@ li {
     border-bottom: 6px solid #ffffff;
 }
 
-.services .wrapper {
+.services__wrapper {
     padding: 43px 40px;
     box-sizing: border-box;
 }
@@ -191,14 +194,15 @@ li {
     padding: 27px 0;
 }
 
-.services__elem {
+.services__element{
+    width: 300px;
     flex-basis: 32%;
     height: 103px;
     position: relative;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
 }
 
-.elem-ico{
+.element-ico{
     display: inline-block;
     height: 61px;
     width: 61px;
@@ -207,38 +211,38 @@ li {
     background-position: 0 1px;
 }
 
-.elem-ico_pen {
+.element-ico_pen {
     background-image: url(./assets/image/singolo1/pen.svg);
 }
 
-.elem-ico_bulb {
+.element-ico_bulb {
     background-image: url(./assets/image/singolo1/bulb.svg);
 }
 
-.elem-ico_heart {
+.element-ico_heart {
     background-image: url(./assets/image/singolo1/heart.svg);
 }
 
-.elem-ico_phone {
+.element-ico_phone {
     background-image: url(./assets/image/singolo1/phone.svg);
 }
 
-.elem-ico_buble {
+.element-ico_buble {
     background-image: url(./assets/image/singolo1/buble.svg);
 }
 
-.elem-ico_star {
+.element-ico_star {
     background-image: url(./assets/image/singolo1/star.svg);
 }
 
-.elem-text {
+.element-text {
     position: absolute;
     left: 79px;
-    bottom: -14px;
+    bottom: -8px;
     padding-bottom: 12px;
 }
 
-.services__elem h3 {
+.services__element h3 {
     font-family: "Lato Black";
     font-size: 18px;
     font-weight: 400;
@@ -248,18 +252,20 @@ li {
     word-spacing: -1px;
 }
 
-.services__elem p {
+.services__element p {
     color: #767e9e;
     font-size: 12px;
     line-height: 22px;
     text-align: justify;
+    overflow: hidden;
+    height: 60px;
 }
 
-.services__elem:nth-child(n+4) .elem-ico {
+.services__element:nth-child(n+4) .elem-ico {
     margin-top: -1px;
 }
 
-.services__elem:nth-child(3n) h3 {
+.services__element:nth-child(3n) h3 {
     margin-left: 3px;
 }
 
@@ -270,7 +276,7 @@ li {
     border-bottom: solid 6px #323746;
 }
 
-.portfolio .wrapper {
+.portfolio__wrapper {
     box-sizing: border-box;
     padding: 42px 40px;
 }
@@ -288,11 +294,13 @@ li {
 }
 
 .portfolio__tags {
-    width: 290px;
+    width: 289px;
     margin-top: -7px;
 }
 
 .tag {
+    font-family: 'Lato Regular', sans-serif;
+    background-color: #2d303a;
     border-radius: 5px;
     border: 1px solid #666d89;
     font-size: 12px;
@@ -301,8 +309,7 @@ li {
     font-weight: 400;
     padding: 0 6px;
     cursor: pointer;
-    word-spacing: -2px;
-    letter-spacing: 0.1px;
+    word-spacing: -1px;
 }
 
 .tag_active {
@@ -320,6 +327,8 @@ li {
     margin-top: 19px;
     padding-left: 0px;
     margin-right: -20px;
+    height: 621px;
+    overflow: hidden;
 }
 
 .picture {
@@ -334,7 +343,7 @@ li {
     border-bottom: solid 6px #ffffff;
 }
 
-.about-us .wrapper {
+.about-us__wrapper {
     box-sizing: border-box;
     padding: 40px 40px;
 }
@@ -347,7 +356,7 @@ li {
 .about-us__description p {
     padding-top: 2px;
     letter-spacing: -0.1px;
-    word-spacing: -1.7px;
+    word-spacing: -0.2px;
 }
 .about-us__description {
     padding-top: 3px;
@@ -368,10 +377,13 @@ li {
     font-family: 'Lato Black', sans-serif;
     font-size: 18px;
     line-height: 18px;
-    font-weight: 900;
     color: #666d89;
     font-weight: 900;
     margin-top: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 300px;
 }
 
 .employee p {
@@ -379,23 +391,16 @@ li {
     line-height: 22px;
     color: #767e9e;
     font-weight: 400;
-    word-spacing: -2px;
+    word-spacing: -1.2px;
     margin-top: -7px;
-    letter-spacing: 0.1px;
     margin-bottom: 21px;
-}
-
-.employee:nth-child(n+2) p{
-    word-spacing: 0.1px;
+    width: 300px;
 }
 
 .employee:last-child img{
     margin-left: 2px;
 }
 
-.employee:last-child h3{
-    letter-spacing: 0.5px;
-}
 
 .contacts-link {
     width: 154px;
@@ -435,7 +440,7 @@ li {
     border-bottom: solid 6px #ea676b;
 }
 
-.get-a-quote .wrapper {
+.get-a-quote__wrapper{
     padding: 43px 40px;
     box-sizing: border-box;
 }
@@ -453,7 +458,7 @@ li {
     color: #f0d8d9;
     letter-spacing: 0.1px;
     word-spacing: -2px;
-    padding-top: 2px;
+    padding: 2px 0 0;
 }
 
 .get-a-quote__form form{
@@ -474,7 +479,7 @@ li {
     color: #f0d8d9;
 }
 
-.get-a-quote__form input::-webkit-input-placeholder{
+.get-a-quote__form input::placeholder{
     color: #f48c8f;
     font-family: 'Lato Regular', sans-serif;
     word-spacing: -1px;
@@ -485,18 +490,15 @@ li {
     background-color: #d6564f;
     border: none;
     border-radius: 5px;
-    padding-left: 15px;
-    min-height: 188px;
+    padding: 12px 0 0 15px;
+    height: 188px;
     font-size: 12px;
     line-height: 12px;
-    padding-top: 12px;
-    min-width: 602px;
-    max-width: 602px;
     color: #f0d8d9;
     resize: none;
 }
 
-.get-a-quote__form textarea::-webkit-input-placeholder { 
+.get-a-quote__form textarea::placeholder { 
     color: #f48c8f;
     font-family: 'Lato Regular', sans-serif;
     word-spacing: -1px;
@@ -538,7 +540,7 @@ li {
     font-weight: 400;
     margin-top: -7px;
     margin-bottom: 24px;
-    letter-spacing: -0.1px;
+    letter-spacing: -0.15px;
     text-align: justify;
     color: #f0d8d9;
 }
@@ -591,9 +593,8 @@ li {
     background-color: #2d303a;
 }
 
-.footer .wrapper {
-    padding: 0 40px;
-    padding-top: 30px;
+.footer__wrapper{
+    padding: 30px 40px 0;
     box-sizing: border-box;
 }
 
@@ -606,36 +607,4 @@ li {
     color: #666d89;
     font-size: 12px;
     word-spacing: -1px;
-}
-
-.pixel-fix-1{
-    letter-spacing: 0.1px;
-}
-
-.pixel-fix-2{
-    word-spacing: -0.9px;;
-    letter-spacing: 0.1px;
-}
-
-.pixel-fix-3 {
-    word-spacing: -1px;
-}
-
-.pixel-fix-4 {
-    margin-left: -0.8px;
-}
-
-.pixel-fix-5 {
-    word-spacing: -1px;
-    letter-spacing: -0.2px;
-    margin-left: -2px;
-}
-
-.pixel-fix-7 {
-    letter-spacing: 0.1px;
-    margin-left: 1.7px;
-}
-
-.pixel-fix-8 {
-    word-spacing: -3px;
 }
