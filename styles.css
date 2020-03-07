@@ -540,10 +540,11 @@ li {
 }
 
 .get-a-quote__form input:required:invalid:focus {
-    border: 2px solid rgb(241, 22, 22);
+    outline: 2px solid rgb(241, 22, 22);
 }
+
 .get-a-quote__form input:required:valid:focus {
-    border: 2px solid rgb(10, 190, 10);
+    outline: 2px solid rgb(10, 190, 10);
 }
 
 .get-a-quote__contacts {
@@ -581,7 +582,8 @@ li {
     color: #f0d8d9;
 }
 
-.contact:hover {
+.contact-phone:hover,
+.contact-mail:hover {
     text-decoration: underline; 
 }
 
