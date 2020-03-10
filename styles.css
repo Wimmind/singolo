@@ -329,13 +329,13 @@ li {
     margin-top: 19px;
     padding-left: 0px;
     margin-right: -20px;
-    height: 621px;
+    max-height: 621px;
     overflow: hidden;
 }
 
 .picture {
     flex-basis: 25%;
-    margin-bottom: 17px;
+    margin-bottom: 20px;
     cursor: pointer;
     width: 220px;
     height: 187px;
