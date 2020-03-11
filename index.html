@@ -24,14 +24,18 @@
         </div>
 </header>
 <main id="main">
-    <section class="slider">
-        <div class="wrapper slider__wrapper">
-            <img src="./assets/image/singolo1/vertical_mobile.png" class="vertical-mobile" alt="vertical_mobile">
-            <img src="./assets/image/singolo1/horizont_mobile.png" class="horizont-mobile" alt="horizont_mobile">
+    <section class="slider" id="slider">
+        <div class="wrapper slider__wrapper" id="slider__wrapper">
+            <div class="slide_one" id="slide_one">
+                <img src="./assets/image/singolo1/vertical_mobile.png" class="vertical-mobile" alt="vertical_mobile">
+                <img src="./assets/image/singolo1/horizont_mobile.png" class="horizont-mobile" alt="horizont_mobile">
+            </div>
+            <div class="slide_two" id="slide_two">
+            </div>
             <div class="slider__buttons flex-space-between">
-                <button class="prev-slide switch-button">
+                <button onclick="slider()" class="prev-slide switch-button">
                 </button>
-                <button class="next-slide switch-button">
+                <button onclick="slider()" class="next-slide switch-button">
                 </button>
             </div>
         </div>
@@ -197,5 +201,6 @@
         </ul>
     </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
