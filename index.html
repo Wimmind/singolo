@@ -14,7 +14,7 @@
             </div>
             <nav class="header__navigation">
                 <ul class="navigation">
-                    <li class="navigation-element"><a href="./index.html" class="navigation-link">Home</a></li>
+                    <li class="navigation-element"><a href="./index.html" class="navigation-link navigation-link_active">Home</a></li>
                     <li class="navigation-element"><a href="#services" class="navigation-link">Services</a></li>
                     <li class="navigation-element"><a href="#portfolio" class="navigation-link">Portfolio</a></li>
                     <li class="navigation-element"><a href="#about-us" class="navigation-link">About</a></li>
@@ -25,18 +25,25 @@
 </header>
 <main id="main">
     <section class="slider" id="slider">
-        <div class="wrapper slider__wrapper" id="slider__wrapper">
-            <div class="slide_one" id="slide_one">
-                <img src="./assets/image/singolo1/vertical_mobile.png" class="vertical-mobile" alt="vertical_mobile">
-                <img src="./assets/image/singolo1/horizont_mobile.png" class="horizont-mobile" alt="horizont_mobile">
+        <div class="wrapper slider__wrapper">
+
+            <div id="slider__pictures">
+                <img src="./assets/image/singolo1/slide-1.jpg" alt="" class="slide-single">
+                <img src="./assets/image/singolo1/slide-2.jpg" alt="" class="slide-single">
             </div>
-            <div class="slide_two" id="slide_two">
-            </div>
+            
             <div class="slider__buttons flex-space-between">
-                <button onclick="slider()" class="prev-slide switch-button">
+                <button class="prev-slide switch-button">
                 </button>
-                <button onclick="slider()" class="next-slide switch-button">
+                <button class="next-slide switch-button">
                 </button>
+            </div >
+            
+            <div class="picture-shadow picture-shadow_vertical" onclick="fade()">
+
+            </div>
+            <div class="picture-shadow picture-shadow_horizontal" onclick="fade()"> 
+
             </div>
         </div>
     </section>
