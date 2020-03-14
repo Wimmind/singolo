@@ -13,7 +13,6 @@ let slider = document.querySelector('#slider-show');
 let slides = document.querySelectorAll('.slide');
 let current = 0;
 let sliderOffset = true;
-let slideBackgroundFlag = true;
 
 function createSlide() {
     let offset = 0;
@@ -39,18 +38,11 @@ function createSlide() {
 
 function leftShift() {
     if (sliderOffset) {
-        if (slideBackgroundFlag === true) {
-            slideBackgroundFlag=false;
-            document.querySelector('#slider').classList.add('slide_second-background');
-        } 
-        else {
-            slideBackgroundFlag=true;
-            document.querySelector('#slider').classList.remove('slide_second-background');
-        }
+        document.querySelector('#slider').classList.toggle('slide_second-background');
         sliderOffset = false;
         let slides2 = document.querySelectorAll('.slide');
         let offset2 = -1;
-        for (let i = 0; i < slides2.length; i += 1) {
+        for (let i = 0; i < slides2.length; i++) {
             slides2[i].style.left = offset2*1020 - 1020 +'px';
             offset2++;
         }
@@ -60,22 +52,15 @@ function leftShift() {
         }
     }   
 }
-document.getElementById('next-slide').addEventListener('click', leftShift);
+document.querySelector('#next-slide').addEventListener('click', leftShift);
 
 function rightShift() {
     if (sliderOffset) {
-        if (slideBackgroundFlag === true) {
-            slideBackgroundFlag=false;
-            document.querySelector('#slider').classList.add('slide_second-background');
-        } 
-        else {
-            slideBackgroundFlag=true;
-            document.querySelector('#slider').classList.remove('slide_second-background');
-        }
+        document.querySelector('#slider').classList.toggle('slide_second-background');
         sliderOffset = false;
         let slides2 = document.querySelectorAll('.slide');
         let offset2 = -1;
-        for (let i = 0; i < slides2.length; i += 1) {
+        for (let i = 0; i < slides2.length; i++) {
             slides2[i].style.left = offset2*1020 + 1020 +'px';
             offset2++;
         }
@@ -85,7 +70,7 @@ function rightShift() {
         }
     } 
 }
-document.getElementById('prev-slide').addEventListener('click', rightShift);
+document.querySelector('#prev-slide').addEventListener('click', rightShift);
 
 createSlide();
 
@@ -94,30 +79,40 @@ slider.addEventListener('transitionend', function () {
     sliderOffset = true;
 });
 
+document.querySelector('.vertical-mobile-button').addEventListener('click', doShadow1);
+function doShadow1() {
+    document.querySelector('.vertical-mobile-shadow').classList.toggle('mobile-shadow');
+}
 
-
+document.querySelector('.horizont-mobile-button').addEventListener('click', doShadow2);
+function doShadow2() {
+    document.querySelector('.horizont-mobile-shadow').classList.toggle('mobile-shadow');
+}
 
 //portfolio
 
-let menuPortfolio = document.querySelector('.portfolio__tags');
-menuPortfolio.addEventListener('click',(event)=>{
-    picture = document.querySelectorAll('.picture');
-    let picture1 = Array.prototype.slice.call(picture);
-
-    shuffle(picture1);
-
-
-
-
-    menuPortfolio.querySelectorAll('.tag').forEach(item => item.classList.remove('tag_active'));
+let tags = document.querySelectorAll('.tag')
+for (let i=0;i<tags.length;i++){
+    tags[i].addEventListener('click', mixPicture);
+}
+function mixPicture() {
+    let gallery = document.querySelector('.portfolio__picture-example');
+    let pictures = Array.from(document.querySelectorAll('.picture'));
+    let newGallery = pictures.sort(function() {return Math.random() - 0.5});
+    gallery.innerHTML="";
+    newGallery.forEach(item=>gallery.append(item));
+    tags.forEach(item => item.classList.remove('tag_active'));
     event.target.classList.add('tag_active');
-});
-
-function shuffle(a) {
-    for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
 }
 
+pictures = document.querySelector('.portfolio__picture-example');
+
+pictures.addEventListener('click', event=>{
+    if (event.target.tagName==='img'.toUpperCase()){
+        pictures.querySelectorAll('img').forEach(item =>{item.classList.remove('picture_active');});
+        event.target.classList.add('picture_active');
+    }
+});
+
+
+//form
