@@ -26,24 +26,18 @@
 <main class="main" id="main">
     <section class="slider" id="slider">
         <div class="wrapper slider__wrapper">
-
-            <div id="slider__pictures">
-                <img src="./assets/image/singolo1/slide-1.jpg" alt="" class="slide-single">
-                <img src="./assets/image/singolo1/slide-2.jpg" alt="" class="slide-single">
+            <div class="slider-show" id='slider-show'>
+                <div class="slide slide_first">
+                    <img src="./assets/image/singolo1/vertical_mobile.png" alt="">
+                    <img class="horizont-mobile" src="./assets/image/singolo1/horizont_mobile.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./assets/image/singolo1/slide-2.jpg" alt="iPhone Vertical">
+                </div>
             </div>
-            
             <div class="slider__buttons flex-space-between">
-                <button class="prev-slide switch-button">
-                </button>
-                <button class="next-slide switch-button">
-                </button>
-            </div >
-            
-            <div class="picture-shadow picture-shadow_vertical" onclick="fade()">
-
-            </div>
-            <div class="picture-shadow picture-shadow_horizontal" onclick="fade()"> 
-
+                <button class="switch-button" id="prev-slide"></button>
+                <button class="switch-button" id="next-slide"></button>
             </div>
         </div>
     </section>
@@ -105,7 +99,7 @@
                 <h2>Portfolio</h2>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 <div class="portfolio__tags flex-space-between">
-                    <button class="tag tag_active ">All</button>
+                    <button class="tag">All</button>
                     <button class="tag">Web Design</button>
                     <button class="tag">Graphic Design</button>
                     <button class="tag">Artwork</button>
