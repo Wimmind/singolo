@@ -116,3 +116,45 @@ pictures.addEventListener('click', event=>{
 
 
 //form
+
+let form = document.querySelector('#form');
+form.addEventListener('submit',  event => {
+    let subject = document.querySelector('#form-subject').value;
+    let describe = document.querySelector('#form-describe').value;
+    let them = document.querySelector('#subject-message');
+    let description = document.querySelector('#describe-message');
+    event.preventDefault();
+    if (form.checkValidity()) {
+        if (subject){
+            them.innerHTML ='<i class="message-title">Тема:</i> '+subject;
+        }
+        else {
+            them.innerHTML='<i class="message-title">Без темы</i>';
+        }
+        if (describe){
+            description.innerHTML ='<i class="message-title">Описание:</i> '+describe;
+        }
+        else {
+            description.innerHTML='<i class="message-title">Без описания</i>'; 
+        }
+        document.getElementById('message-block').classList.remove('hidden');
+    }
+    form.reset();
+    return false;
+});
+
+let messageBlock = document.querySelector('#message-block');
+let buttonClose = document.querySelector('#button-close');
+
+messageBlock.addEventListener('click', event=> {
+    if (event.target === messageBlock || event.target === buttonClose) {
+        messageBlock.classList.add('hidden');
+    }
+});
+
+buttonClose.addEventListener('click', event=> {
+    if (event.target === messageBlock || event.target === buttonClose) {
+        messageBlock.classList.add('hidden');
+    }
+});
+

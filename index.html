@@ -180,12 +180,13 @@
             </div>
             <div class="flex-space-between">
                 <div class="get-a-quote__form">
-                    <form action method="POST">
-                        <input type="text" name="name" placeholder="Name (Required)" required>
-                        <input type="email" name="email" placeholder="Email (Required)" required>
-                        <input type="text" name="subject" placeholder="Subject">
-                        <textarea name="question" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
-                        <button type="submit">Send</button>
+                    <form action="./index.html" method="POST" id="form">
+                        <input id="form-name" type="text" name="name" placeholder="Name (Required)" required>
+                        <input id="form-email" type="email" name="email" placeholder="Email (Required)" required>
+                        <input id="form-subject" type="text" name="subject" placeholder="Subject">
+                        <textarea id="form-describe" name="question" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
+                        <button class="contacts-form-input" id="submit-button" type="submit">Send</button>
+                      
                     </form>
                 </div>
                 <div class="get-a-quote__contacts">
@@ -194,6 +195,14 @@
                     <span class="contact contact-location">Elm St. 14/05 Lost City</span> 
                     <a class="contact contact-phone" href="tel:+035283318635">03528 331 86 35</a>
                     <a class="contact contact-mail" href="mailto:info@singolo.com">info@singolo.com</a>
+                </div>
+            </div>
+            <div class="message-block hidden" id="message-block">
+                <div class="message">
+                    <p class="message-title">Письмо отправлено</p>
+                    <p id="subject-message"></p>
+                    <p id="describe-message"></p>
+                    <button class="button-close" id="button-close">OK</button>
                 </div>
             </div>
         </div>
