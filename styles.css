@@ -742,6 +742,7 @@ li {
 .message {
     overflow-wrap: break-word;
     max-width: 600px;
+    max-height: 600px;
     position: absolute;
     top: 25%;
     left: calc(50% - 290px);
@@ -750,6 +751,8 @@ li {
     text-align: center;
     border: solid 2px #f48c8f;
     border-radius: 20px;
+    overflow-x: scroll;
+    overflow-y: scroll;
 }
 
 .message-title {
