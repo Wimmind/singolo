@@ -144,18 +144,8 @@ document.querySelector('#form-button').addEventListener('click',  event => {
     return false;
 });
 
-let messageBlock = document.querySelector('#message-block');
-let buttonClose = document.querySelector('#button-close');
-
-messageBlock.addEventListener('click', event=> {
-    if (event.target === messageBlock || event.target === buttonClose) {
-        messageBlock.classList.add('hidden');
-    }
+document.querySelector('#button-close').addEventListener('click', event=> {
+    document.querySelector('#message-block').classList.add('hidden');
 });
 
-buttonClose.addEventListener('click', event=> {
-    if (event.target === messageBlock || event.target === buttonClose) {
-        messageBlock.classList.add('hidden');
-    }
-});
 
