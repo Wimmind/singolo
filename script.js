@@ -118,7 +118,8 @@ pictures.addEventListener('click', event=>{
 //form
 
 let form = document.querySelector('#form');
-form.addEventListener('submit',  event => {
+
+document.querySelector('#form-button').addEventListener('click',  event => {
     let subject = document.querySelector('#form-subject').value;
     let describe = document.querySelector('#form-describe').value;
     let them = document.querySelector('#subject-message');

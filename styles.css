@@ -751,8 +751,7 @@ li {
     text-align: center;
     border: solid 2px #f48c8f;
     border-radius: 20px;
-    overflow-x: scroll;
-    overflow-y: scroll;
+    overflow: auto;
 }
 
 .message-title {
