@@ -3,8 +3,10 @@
 let menuHeader = document.querySelector('.navigation');
 
 menuHeader.addEventListener('click',(event)=>{
-    menuHeader.querySelectorAll('.navigation-link').forEach(item => item.classList.remove('navigation-link_active'));
-    event.target.classList.add('navigation-link_active');
+    if (event.target.tagName==='a'.toUpperCase()){
+        menuHeader.querySelectorAll('.navigation-link').forEach(item => item.classList.remove('navigation-link_active'));
+        event.target.classList.add('navigation-link_active');
+    }
 });
 
 
