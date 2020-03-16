@@ -119,7 +119,7 @@ pictures.addEventListener('click', event=>{
 
 let form = document.querySelector('#form');
 
-document.querySelector('#form-button').addEventListener('click',  event => {
+form.addEventListener('submit',  event => {
     let subject = document.querySelector('#form-subject').value;
     let describe = document.querySelector('#form-describe').value;
     let them = document.querySelector('#subject-message');
@@ -127,25 +127,24 @@ document.querySelector('#form-button').addEventListener('click',  event => {
     event.preventDefault();
     if (form.checkValidity()) {
         if (subject){
-            them.innerHTML ='<i class="message-title">Тема:</i> '+subject;
+            them.innerHTML ='<i class="message-title">Subject:</i> '+subject;
         }
         else {
-            them.innerHTML='<i class="message-title">Без темы</i>';
+            them.innerHTML='<i class="message-title">Without subject</i>';
         }
         if (describe){
-            description.innerHTML ='<i class="message-title">Описание:</i> '+describe;
+            description.innerHTML ='<i class="message-title">Description:</i> '+describe;
         }
         else {
-            description.innerHTML='<i class="message-title">Без описания</i>'; 
+            description.innerHTML='<i class="message-title">Without description</i>'; 
         }
         document.getElementById('message-block').classList.remove('hidden');
     }
-    form.reset();
-    return false;
 });
 
 document.querySelector('#button-close').addEventListener('click', event=> {
     document.querySelector('#message-block').classList.add('hidden');
+    form.reset();
 });
 
 
