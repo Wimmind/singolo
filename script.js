@@ -1,14 +1,22 @@
 // header
+document.addEventListener('scroll',onscroll);
 
-let menuHeader = document.querySelector('.navigation');
+function onscroll(){
+ let curPos = window.scrollY;
+ let sections = document.querySelectorAll('#main>section');
+ let links = document.querySelectorAll('.navigation-link');
 
-menuHeader.addEventListener('click',(event)=>{
-    if (event.target.tagName==='a'.toUpperCase()){
-        menuHeader.querySelectorAll('.navigation-link').forEach(item => item.classList.remove('navigation-link_active'));
-        event.target.classList.add('navigation-link_active');
+ sections.forEach((element)=>{
+    if (element.offsetTop <= curPos+95 && (element.offsetTop+element.offsetHeight) > curPos+95){
+        links.forEach((a)=>{
+            a.classList.remove('navigation-link_active');
+            if (element.getAttribute('id') === a.getAttribute('href').substring(1)){
+                a.classList.add('navigation-link_active');
+            }
+        })
     }
-});
-
+ });
+}
 
 // slider
 let slider = document.querySelector('#slider-show');
