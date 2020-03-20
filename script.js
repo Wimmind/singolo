@@ -1,6 +1,8 @@
 // header
 document.addEventListener('scroll',onscroll);
 
+let nav = document.querySelector('.navigation');
+
 function onscroll(){
  let curPos = window.scrollY;
  let sections = document.querySelectorAll('#main>section');
@@ -16,6 +18,12 @@ function onscroll(){
         })
     }
  });
+ if (document.documentElement.scrollHeight - document.documentElement.scrollTop === document.documentElement.clientHeight) {
+    links.forEach((a)=>{
+        a.classList.remove('navigation-link_active');
+    })
+    links[links.length-1].classList.add('navigation-link_active');
+ }
 }
 
 // slider
@@ -108,13 +116,12 @@ for (let i=0;i<tags.length;i++){
 function mixPicture() {
     let gallery = document.querySelector('.portfolio__picture-example');
     let pictures = Array.from(document.querySelectorAll('.picture'));
-    let newGallery = pictures.sort(function() {return Math.random() - 0.5});
     gallery.innerHTML="";
-    newGallery.forEach(item=>gallery.append(item));
+pictures.splice(-1).concat(pictures).forEach(item=>gallery.append(item));
+    //pictures.forEach(item=>gallery.append(item));
     tags.forEach(item => item.classList.remove('tag_active'));
     event.target.classList.add('tag_active');
 }
-
 pictures = document.querySelector('.portfolio__picture-example');
 
 pictures.addEventListener('click', event=>{
