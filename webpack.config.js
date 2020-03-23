@@ -3,10 +3,11 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     watch: true,
-    entry: ['./src/index.js','./src/styles.scss'],
+    entry: ['./src/index.js','./src/sass/styles.scss'],
     output: {
         path: path.join(__dirname, '/dist'),
         filename: 'script.js',
