@@ -25,27 +25,35 @@
 </header>
 <main class="main" id="main">
     <section class="slider" id="slider">
+
+
         <div class="wrapper slider__wrapper">
-            <div class="slider-show" id='slider-show'>
-                <div class="slide slide_first">
-                    <div class="vertical-mobile">
-                        <div class="vertical-mobile-shadow"></div>
-                        <span class="vertical-mobile-button"></span>
-                    </div>
-                    <div class="horizont-mobile">
-                        <div class="horizont-mobile-shadow"></div>
-                        <span class="horizont-mobile-button"></span>
-                    </div>
+
+            <div class="slide slide_show">
+                <div class="vertical-mobile">
+                    <img src="assets/image/vertical_mobile.png" alt="phone"> 
+                    <div class="home-btn"></div>
+                    <div class="black-screen" hidden='true'> </div>                   
                 </div>
-                <div class="slide">
-                    <img src="assets/image/slide-2.jpg" alt="iPhone Vertical">
+                <div class="horizontal-mobile">
+                    <img src="assets/image/horizont_mobile.png" alt="phone">
+                    <div class="home-btn"></div>
+                    <div class="black-screen" hidden='true'> </div> 
                 </div>
             </div>
+            
+            <div class="slide slide_second">
+                <img src="assets/image/slide-2.png" alt="phone">
+            </div>
+
             <div class="slider__buttons flex-space-between">
                 <button class="switch-button" id="prev-slide"></button>
                 <button class="switch-button" id="next-slide"></button>
             </div>
-        </div>
+
+        </div>   
+
+
     </section>
     <section class="services" id="services">
         <div class="wrapper services__wrapper">
@@ -111,7 +119,7 @@
                     <button class="tag">Artwork</button>
                 </div>
             </div>
-                <ul class="portfolio__picture-example flex-space-between">
+                <ul class="portfolio__picture-example">
                     <li class="picture"><img src="assets/image/1.png" alt="1" height="187" width="220"></li>
                     <li class="picture"><img src="assets/image/2.png" alt="2" height="187" width="220"></li>
                     <li class="picture"><img src="assets/image/3.png" alt="3" height="187" width="220"></li>
@@ -133,7 +141,7 @@
                 <h2>About Us</h2>
                 <p>Fusce dapibus,tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             </div>
-            <ul class="about-us__members flex-space-between">
+            <ul class="about-us__members">
                 <li class="employee">
                     <img src="assets/image/employee1.png" alt="">
                     <h3>Adam Jensen</h3>
