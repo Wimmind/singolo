@@ -635,7 +635,7 @@ li {
 
 .about-us__wrapper {
     height: 100%;
-    padding: 40px 40px 49px;
+    padding: 40px 40px 47px;
     @include media-laptop {
         padding: 33px 40px 55px;
     }
@@ -774,19 +774,38 @@ li {
     background-image: url(../assets/image/singolo2/linkedin.svg);
 }
 
+
+/*contact*/
+
+
 .get-a-quote {
-    height: 648px;
     width: 100%;
     background-color: #f06c64;
     border-bottom: solid 6px #ea676b;
+    @include media-tablet {
+        border-bottom: none;
+    }
 }
 
 .get-a-quote__wrapper{
+    height: 100%;
     padding: 43px 40px;
+    @include media-laptop {
+        padding: 37px 43px 38px;
+    }
+    @include media-tablet {
+        padding: 25px 30px 27px;
+    }
 }
 
 .get-a-quote__description {
     margin-bottom: 44px;
+    @include media-laptop {
+        margin-bottom: 25px;
+    }
+    @include media-tablet {
+        margin-bottom: 53px;
+    }
 }
 
 .get-a-quote__description h2 {
@@ -795,16 +814,30 @@ li {
 }
 
 .get-a-quote__description p {
+    padding-top: 2px;
     color: #f0d8d9;
-    letter-spacing: 0.1px;
-    word-spacing: -2px;
-    padding: 2px 0 0;
+    text-align: justify;
 }
 
-.get-a-quote__form form{
+.form-container {
+    display: flex;
+    @include media-tablet {
+        flex-direction: column;
+    }
+}
+
+.get-a-quote__form{
     display: flex;
     flex-direction: column;
-    width: 619px;
+    flex: 1 0 65.9%;
+    margin-right: 21px;
+    @include media-laptop {
+        flex: 1 0 63.9%;
+        margin-right: 31px;
+    }
+    @include media-tablet {
+        margin-right: 0;
+    }
 }
 
 .get-a-quote__form input{
@@ -817,6 +850,9 @@ li {
     font-size: 12px;
     line-height: 12px;
     color: #f0d8d9;
+    @include media-laptop {
+        margin-bottom: 12px;
+    }
 }
 
 
@@ -832,11 +868,14 @@ li {
     border: none;
     border-radius: 5px;
     padding: 12px 0 0 15px;
-    height: 188px;
+    height: 159px;
     font-size: 12px;
     line-height: 12px;
     color: #f0d8d9;
     resize: none;
+    @include media-laptop {
+        margin-bottom: 5px;
+    }
 }
 
 .get-a-quote__form textarea::placeholder { 
@@ -847,18 +886,28 @@ li {
 
 
 .button-close,.get-a-quote__form button{
-    width: 100px;
-    height: 30px;
-    background-color: #d6564f;
+    width: 136px;
+    height: 38px;
+    background: #FBC65F;
     border-radius: 5px;
     cursor: pointer;
-    border: solid 1px #f48c8f ;
-    color: #f48c8f;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    color: #886A30;
     font-family: Lato, sans-serif;
+    border: none;
+    &:hover {
+        background: #886A30;
+        color: #FBC65F;
+    }
+    @include media-tablet {
+        width: 100%;
+        height: 47px;    
+    }
 }
 
 .button-close,
-.get-a-quote__form button:hover,
 .get-a-quote__form input:hover,
 .get-a-quote__form textarea:hover { 
     background-color: #b14a44;
@@ -884,9 +933,11 @@ li {
 }
 
 .get-a-quote__contacts {
-    padding-left: 21px;
-    margin-top: -19px;
+    margin-top: -18px;
     color: #f0d8d9;
+    @include media-tablet {
+        margin-top: 13px;
+    }
 }
 
 .get-a-quote__contacts h3 {
@@ -958,17 +1009,27 @@ li {
 
 .footer__wrapper{
     padding: 30px 40px 0;
+    @include media-tablet {
+        padding: 0;
+        align-items: center;
+    }
 }
 
 .footer .contacts-link {
     margin-top: -9px;
     margin-right: -1px;
+    @include media-tablet {
+        margin: auto;
+    }
 }
 
 .copyright{
     color: #666d89;
     font-size: 12px;
     word-spacing: -1px;
+    @include media-tablet {
+        display: none;
+    }
 }
 
 .message-block {
@@ -987,7 +1048,7 @@ li {
 
 .message {
     overflow-wrap: break-word;
-    width: 600px;
+    width: 660px;
     max-height: 400px;
     position: absolute;
     top: calc(50% - 200px);;
@@ -998,6 +1059,12 @@ li {
     border: solid 2px #f48c8f;
     border-radius: 20px;
     overflow: auto;
+    @include media-laptop {
+        bottom: calc(50% - 100px);;
+        left: calc(50% - 150px);
+        width: 300px;
+        max-height: 200px;
+    }
 }
 
 .message-title {
