@@ -39,7 +39,7 @@ body {
 }
 
 .wrapper {
-    margin: auto;
+    margin: 0 auto;
     max-width: 1020px;
     height: 100%;
     box-sizing: border-box;
@@ -73,7 +73,7 @@ li {
 .header {
     z-index: 3;
     position: fixed;
-    width: 100vw;
+    width: 100%;
     background-color: #2d303a;
     border-bottom: solid 6px #323746;
     @include media-tablet {
@@ -96,10 +96,10 @@ li {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: -0.3px;
-    padding-left: 31px;
+    padding-left: 40px;
     @include media-tablet {
         font-size: 19px;
-        padding-right: 45px;
+        padding-right: 71px;
     }
 }
 
@@ -125,9 +125,10 @@ li {
     width: 371px;
     color: $border-white;
     text-transform: uppercase;
-    padding-right: 49px;
+    padding-right: 40px;
     @include media-laptop {
-        margin-top: 20px;
+        margin-top: 16px;
+        padding-right: 42px;
     }
     @include media-tablet {
         display: none;
@@ -222,6 +223,7 @@ li {
 }
 
 .slide {
+    display: block;
     display: none;
     position: relative;
     animation: 0.6s ease-in-out;  
@@ -244,9 +246,32 @@ li {
     position: absolute;
     top: 53px;
     left: 112px;
+    max-width: 100%;
     @include media-laptop {
         top: 5vw;
         left: 11vw;
+    }
+    &>.screen-shadow {
+        position: absolute;
+        width: 189px;
+        height: 333px;
+        top: 65px;
+        left: 14px;
+        @include media-laptop {
+            display: none;
+        }
+    }
+    &>.button-shadow {
+        cursor: pointer;
+        position: absolute;
+        width: 213px;
+        height: 458px;
+        bottom: 26px;
+        left: 0px;
+        border-radius: 28px;
+        @include media-laptop {
+            display: none;
+        }
     }
 }
 
@@ -259,6 +284,7 @@ li {
 }
 
 .horizontal-mobile{
+    max-width: 100%;
     position: absolute;
     top: 174px;
     left: 425px;
@@ -266,6 +292,31 @@ li {
         top: 17vw;
         left: 42vw;
     }
+    &>.screen-shadow {
+        position: absolute;
+        width: 333px;
+        height: 188px;
+        top: 14px;
+        left: 60px;
+        @include media-laptop {
+           display: none;
+        }
+    }
+    &>.button-shadow {
+        cursor: pointer;
+        position: absolute;
+        width: 458px;
+        height: 216px;
+        bottom: 27px;
+        border-radius: 28px;
+        @include media-laptop {
+            display: none;
+        }
+    }
+}
+
+.shadow {
+    background: black;
 }
 
 .horizontal-mobile img {
@@ -537,6 +588,9 @@ li {
     @include media-laptop {
         word-spacing: 0.3px;
     }
+    @include media-tablet {
+        margin-bottom: 18px;
+    }
 }
 
 .portfolio__tags {
@@ -544,6 +598,9 @@ li {
     margin-bottom: 19px;
     @include media-laptop {
         margin-bottom: 30px;
+    }
+    @include media-tablet {
+        margin-bottom: 24px;
     }
     @include media-mobile {
         width: 262px;
@@ -682,7 +739,7 @@ li {
         padding: 33px 40px 55px;
     }
     @include media-tablet {
-        padding: 14px 31px 55px;
+        padding: 14px 31px 32px;
     }
 
 }
@@ -771,6 +828,9 @@ li {
     @include media-laptop {
         margin: 7px 0 -11px;
     }
+    @include media-tablet {
+        margin: 17px 0 -14px;
+    }
 }
 
 .employee p {
@@ -836,7 +896,7 @@ li {
         padding: 37px 43px 38px;
     }
     @include media-tablet {
-        padding: 25px 30px 27px;
+        padding: 25px 30px 34px;
     }
 }
 
@@ -916,7 +976,8 @@ li {
     color: #f0d8d9;
     resize: none;
     @include media-laptop {
-        margin-bottom: 5px;
+        margin-bottom: 19px;
+        height: 146px;
     }
 }
 
@@ -998,6 +1059,11 @@ li {
     letter-spacing: -0.15px;
     text-align: justify;
     color: #f0d8d9;
+    @include media-laptop {
+        margin-top: -15px;
+        margin-bottom: 15px;
+
+    }
 }
 
 .contact {
@@ -1009,6 +1075,9 @@ li {
     padding-left: 23px;
     position: relative;
     color: #f0d8d9;
+    @include media-tablet {
+        margin-bottom: 14px;
+    }
 }
 
 .contact-phone:hover,

@@ -33,6 +33,17 @@ document.querySelector('#hamburger').addEventListener('click', ()=> {
     document.querySelector('.header__navigation_mobile').classList.toggle('hidden');
 });
 
+
+document.querySelector('.vertical-mobile>.button-shadow').addEventListener('click', ()=> {
+    document.querySelector('.vertical-mobile>.screen-shadow').classList.toggle('shadow')
+});
+
+document.querySelector('.horizontal-mobile>.button-shadow').addEventListener('click', ()=> {
+    document.querySelector('.horizontal-mobile>.screen-shadow').classList.toggle('shadow')
+});
+
+
+
 // slider
 
 document.querySelector('#next-slide').addEventListener('click', ()=> {
