@@ -27,6 +27,12 @@ function onscroll(){
 }
 
 
+document.querySelector('#hamburger').addEventListener('click', ()=> {
+    document.querySelector('#hamburger').classList.toggle('hamburger-rotate');
+    document.querySelector('.logo').classList.toggle('logo-mobile')
+    document.querySelector('.header__navigation_mobile').classList.toggle('hidden');
+});
+
 // slider
 
 document.querySelector('#next-slide').addEventListener('click', ()=> {

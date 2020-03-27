@@ -43,9 +43,6 @@ body {
     max-width: 1020px;
     height: 100%;
     box-sizing: border-box;
-    @include media-mobile {
-        padding: 0 10px;
-    }
 }
 
 h2 {
@@ -100,6 +97,15 @@ li {
     font-weight: 700;
     letter-spacing: -0.3px;
     padding-left: 31px;
+    @include media-tablet {
+        font-size: 19px;
+        padding-right: 45px;
+    }
+}
+
+.logo-mobile {
+    position: absolute;
+    left: 38px;
 }
 
 .logo-link{
@@ -111,7 +117,7 @@ li {
     color: #f06c64;
 }
 
-.navigation {
+.header__navigation>.navigation {
     margin-top: 23px;
     font-size: 12px;
     line-height: 14px;
@@ -127,6 +133,39 @@ li {
         display: none;
     }
 }
+.header__navigation_mobile {
+    @include media-tablet {
+        position: fixed;
+        top: 71px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background:rgba(45, 48, 58, 0.6);;
+        &> .navigation {
+            margin: 0;
+            padding-left: 0;
+            padding-top: 166px;
+            position: absolute;
+            left: 0;
+            width: 278px;
+            height: 100%;
+            background: #2D303A;
+        }
+    }
+}
+.header__navigation_mobile>.navigation>.navigation-element {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 27px;
+    padding-left: 71px;
+    text-transform: uppercase;
+    &::after{
+        display: none;
+    }
+}
+
 
 .navigation-element{
     cursor: pointer;
@@ -505,6 +544,9 @@ li {
     margin-bottom: 19px;
     @include media-laptop {
         margin-bottom: 30px;
+    }
+    @include media-mobile {
+        width: 262px;
     }
 }
 
