@@ -7,9 +7,12 @@ function onscroll(){
  let curPos = window.scrollY;
  let sections = document.querySelectorAll('#main>section');
  let links = document.querySelectorAll('.navigation-link');
-
+let w = 96;
+if (window.innerWidth<=375){
+    w = 72;
+}
  sections.forEach((element)=>{
-    if (element.offsetTop <= curPos+95 && (element.offsetTop+element.offsetHeight) > curPos+95){
+    if (element.offsetTop <= curPos+w && (element.offsetTop+element.offsetHeight) > curPos+w){
         links.forEach((a)=>{
             a.classList.remove('navigation-link_active');
             if (element.getAttribute('id') === a.getAttribute('href').substring(1)){
@@ -25,6 +28,8 @@ function onscroll(){
     links[links.length-1].classList.add('navigation-link_active');
  }
 }
+
+
 
 
 document.querySelector('#hamburger').addEventListener('click', ()=> {
